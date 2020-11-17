@@ -7,7 +7,7 @@
 Запуск packer
 
 ```
-01\packer> packer build centos-7-9.json
+packer> packer build centos-7-9.json
 ...
 ==> Wait completed after 8 minutes 36 seconds
 
