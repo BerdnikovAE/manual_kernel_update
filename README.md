@@ -1,5 +1,35 @@
-# manual_kernel_update
+# ÄÇ 01 = manual_kernel_update
 
-Ð˜Ð·Ð¼ÐµÐ½ÐµÐ½Ð¸Ñ€Ñ Ð¾Ñ‚ Ð¾Ñ€Ð¸Ð³Ð¸Ð½Ð°Ð»ÑŒÐ½Ð¾Ð³Ð¾ ÑÑ†ÐµÐ½Ð°Ñ€Ð¸Ñ:
-1. ÐÐ¾Ð²Ð°Ñ Ð²ÐµÑ€ÑÐ¸Ñ Ð¾Ñ€Ð¸Ð³Ð¸Ð½Ð°Ð»ÑŒÐ½Ð¾Ð³Ð¾ Ð¾Ð±Ñ€Ð°Ð·Ð° Ñ yandex 
-2. Ð˜ÑÐ¿Ñ€Ð°Ð²Ð»ÐµÐ½Ð°Ñ Ñ‡Ð°ÑÑ‚ÑŒ provisining-a, Ð³Ð´Ðµ Ð²Ð½Ð¾ÑÑÑ‚ÑÑ Ð¸Ð·Ð¼ÐµÐ½ÐµÐ½Ð¸Ñ Ð² `/etc/sudoers.d/vagrant`, Ð¸Ð½Ð°Ñ‡Ðµ Ð±Ñ‹Ð»Ð° Ð¾ÑˆÐ¸Ð±ÐºÐ° Ð½Ð° ÑÑ‚Ð°Ð¿Ðµ Ð·Ð°Ð¿ÑƒÑÐºÐ° ÑÐºÑ€Ð¸Ð¿Ñ‚Ð¾Ð²
+Èçìåíåíèðÿ îò [îðèãèíàëüíîãî](manual/manual.md) ñöåíàðèÿ:
+1. Íîâàÿ âåðñèÿ îðèãèíàëüíîãî îáðàçà ñ yandex 
+2. Èñïðàâëåíàÿ ÷àñòü provisining-a, ãäå âíîñÿòñÿ èçìåíåíèÿ â `/etc/sudoers.d/vagrant`, èíà÷å áûëà îøèáêà íà ýòàïå çàïóñêà ñêðèïòîâ
+
+Çàïóñê packer
+
+```
+01\packer> packer build centos-7-9.json
+...
+==> Wait completed after 8 minutes 36 seconds
+
+==> Builds finished. The artifacts of successful builds are:
+--> centos-7.9: 'virtualbox' provider box: centos-7.9.2009-kernel-5-x86_64-Minimal.box
+```
+
+Ïóáëèêóåì â Vagrant Cloud îáðàç
+
+Ïðîâåðÿåì:
+
+```
+
+01\test> vagrant init berdnikovae/centos-7-9
+01\test> vagrant up
+...
+01\test> vagrant ssh
+Last login: Mon Nov 16 06:08:54 2020 from gateway
+[vagrant@localhost ~]$ uname -r
+5.9.8-1.el7.elrepo.x86_64
+```
+
+
+
+
