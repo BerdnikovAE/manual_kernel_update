@@ -20,11 +20,9 @@
 Проверяем:
 
 ```
-
-01\test> vagrant init berdnikovae/centos-7-9
-01\test> vagrant up
+> vagrant up
 ...
-01\test> vagrant ssh
+> vagrant ssh
 Last login: Mon Nov 16 06:08:54 2020 from gateway
 [vagrant@localhost ~]$ uname -r
 5.9.8-1.el7.elrepo.x86_64
